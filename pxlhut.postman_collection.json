@@ -1,0 +1,258 @@
+{
+	"info": {
+		"_postman_id": "770993c4-d52f-4083-9bf8-6b3ad4b82c09",
+		"name": "pxlhut",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28407031",
+		"_collection_link": "https://abc999-6326.postman.co/workspace/My-Workspace~f091966f-dd23-49e0-88e9-ad71f5120a27/collection/28407031-770993c4-d52f-4083-9bf8-6b3ad4b82c09?action=share&source=collection_link&creator=28407031"
+	},
+	"item": [
+		{
+			"name": "register",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Cache-Control",
+						"value": "no-cache",
+						"name": "cache-control",
+						"type": "text"
+					},
+					{
+						"key": "Postman-Token",
+						"value": "<calculated when request is sent>",
+						"name": "postman-token",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"name": "content-type",
+						"type": "text"
+					},
+					{
+						"key": "Content-Length",
+						"value": "<calculated when request is sent>",
+						"name": "content-length",
+						"type": "text"
+					},
+					{
+						"key": "Host",
+						"value": "<calculated when request is sent>",
+						"name": "host",
+						"type": "text"
+					},
+					{
+						"key": "User-Agent",
+						"value": "PostmanRuntime/7.39.1",
+						"name": "user-agent",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "*/*",
+						"name": "accept",
+						"type": "text"
+					},
+					{
+						"key": "Accept-Encoding",
+						"value": "gzip, deflate, br",
+						"name": "accept-encoding",
+						"type": "text"
+					},
+					{
+						"key": "Connection",
+						"value": "keep-alive",
+						"name": "connection",
+						"type": "text"
+					},
+					{
+						"key": "authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3ZmU5ZWEzYjE3MjQzYjlkOWMzNjQyOSIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNzQ0ODE4NDY5LCJleHAiOjE3NDQ4MjIwNjl9.BmrUR03d4Ik0Ik09V2cpVz_5t8SdI-qDv5NkQd5GdsI",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"John Doe\",\r\n  \"email\": \"john12@example.com\",\r\n  \"password\": \"SecurePass123\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/auth/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"auth",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "payemnt and order",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"userId\": \"661e17db9f7c2d5f2cd12345\", \r\n  \"email\": \"customer@example.com\",\r\n  \"phone\": \"1234567890\",\r\n  \"name\": \"John Doe\",\r\n  \"orderTotal\": 150.75,\r\n  \"paymentStatus\": \"paid\",\r\n  \"shippingAddress\": \"123 Main St, San Francisco, CA\",\r\n  \"billingAddress\": \"456 Billing St, San Francisco, CA\",\r\n  \"orderStatus\": \"processing\",\r\n  \"orderItems\": [\r\n    {\r\n      \"productId\": \"661e182f9f7c2d5f2cd67890\",\r\n      \"name\": \"Wireless Mouse\",\r\n      \"quantity\": 2,\r\n      \"price\": 25.00\r\n    },\r\n    {\r\n      \"productId\": \"661e185a9f7c2d5f2cd09876\",\r\n      \"name\": \"Keyboard\",\r\n      \"quantity\": 1,\r\n      \"price\": 100.75\r\n    }\r\n  ],\r\n  \"deliveryFee\": 5.00,\r\n  \"taxAmount\": 10.00\r\n//   \"transactionId\": \"txn_001_test_123456\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/payments/checkout",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"payments",
+						"checkout"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"john1@example.com\",\r\n  \"password\": \"SecurePass123\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user profile",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Cache-Control",
+						"value": "no-cache",
+						"name": "cache-control",
+						"type": "text"
+					},
+					{
+						"key": "Postman-Token",
+						"value": "<calculated when request is sent>",
+						"name": "postman-token",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"name": "content-type",
+						"type": "text"
+					},
+					{
+						"key": "Content-Length",
+						"value": "<calculated when request is sent>",
+						"name": "content-length",
+						"type": "text"
+					},
+					{
+						"key": "Host",
+						"value": "<calculated when request is sent>",
+						"name": "host",
+						"type": "text"
+					},
+					{
+						"key": "User-Agent",
+						"value": "PostmanRuntime/7.39.1",
+						"name": "user-agent",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "*/*",
+						"name": "accept",
+						"type": "text"
+					},
+					{
+						"key": "Accept-Encoding",
+						"value": "gzip, deflate, br",
+						"name": "accept-encoding",
+						"type": "text"
+					},
+					{
+						"key": "Connection",
+						"value": "keep-alive",
+						"name": "connection",
+						"type": "text"
+					},
+					{
+						"key": "authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3ZmU5ZWEzYjE3MjQzYjlkOWMzNjQyOSIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNzQ0ODE4NDY5LCJleHAiOjE3NDQ4MjIwNjl9.BmrUR03d4Ik0Ik09V2cpVz_5t8SdI-qDv5NkQd5GdsI",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"john1@example.com\",\r\n  \"password\": \"SecurePass13\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/auth/me",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"auth",
+						"me"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
