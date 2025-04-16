@@ -260,13 +260,3 @@ describe("Permission Middleware", () => {
 
 ---
 
-## 📬 Contact
-
-Built by [Your Name](https://github.com/your-username)  
-For issues, open a GitHub issue or contact directly.
-
----
-
-## 📄 License
-
-This project is open-source and available under the [MIT License](LICENSE).
