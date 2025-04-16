@@ -94,7 +94,7 @@ NODE_ENV=development
 npm start
 ```
 
-Server will run at: `http://localhost:3000`
+Server will run at: `http://localhost:3000` if not set port in env
 
 ---
 
