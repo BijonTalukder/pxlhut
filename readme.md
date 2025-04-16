@@ -193,11 +193,34 @@ POST /payments/checkout
 **Body:**
 ```json
 {
-  "items": [
-    { "name": "Logo Design", "price": 5000, "quantity": 1 }
+  "userId": "661e17db9f7c2d5f2cd12345", 
+  "email": "customer@example.com",
+  "phone": "1234567890",
+  "name": "John Doe",
+  "orderTotal": 150.75,
+  "paymentStatus": "paid",
+  "shippingAddress": "123 Main St, San Francisco, CA",
+  "billingAddress": "456 Billing St, San Francisco, CA",
+  "orderStatus": "processing",
+  "orderItems": [
+    {
+      "productId": "661e182f9f7c2d5f2cd67890",
+      "name": "Wireless Mouse",
+      "quantity": 2,
+      "price": 25.00
+    },
+    {
+      "productId": "661e185a9f7c2d5f2cd09876",
+      "name": "Keyboard",
+      "quantity": 1,
+      "price": 100.75
+    }
   ],
-  "userId": "user_id_here"
+  "deliveryFee": 5.00,
+  "taxAmount": 10.00
+//   "transactionId": "txn_001_test_123456"
 }
+
 ```
 
 **Response:**
