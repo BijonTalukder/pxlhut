@@ -6,7 +6,7 @@ class OrderController {
     constructor(orderService) {
 
 
-        console.log("orderService", orderService);
+        // console.log("orderService", orderService);
         
         this.orderService = orderService;
         this.paymentService = new PaymentService()

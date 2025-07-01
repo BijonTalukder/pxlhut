@@ -4,14 +4,24 @@ const BcryptHasher = require('../utility/BcryptPasswordHasher');
 
 const userSchema = new mongoose.Schema({
 
+
+    userId: {
+        type: String
+    },
     name: {
         type: String
     },
     email: { type: String, unique: true, required: true },
     password: { type: String, required: true },
     refreshToken: { type: String },
-    role: { type: String, enum: ['user', 'admin'], default: 'user' }
-},{
+    role: { type: String, enum: ['user', 'admin', 'manager'], default: 'user' }
+
+
+    , groupId: {
+        type: String
+    }
+
+}, {
     timestamps: true,
     versionKey: false
 });
